@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import Parser from 'rss-parser';
 import './PodcastList.css';
+
+/* global RSSParser */
+//Debe ser global o devuelve error en el build
+import 'rss-parser/dist/rss-parser.min.js';
+const parser = new RSSParser();
 
 class componentName extends Component {
     state = {
@@ -8,7 +12,7 @@ class componentName extends Component {
     }
 
     async componentDidMount() {
-        const parser = await new Parser();
+        //const parser = await new Parser();
         const feed = await parser.parseURL('http://feeds.soundcloud.com/users/soundcloud:users:410463717/sounds.rss');
         const response = await feed.items;
         await response.map((item) => {
