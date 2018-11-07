@@ -1,0 +1,16 @@
+#podcast-list li,#podcast-list ul {
+    list-style: none;
+}
+
+#podcast-list h2 {
+    padding: 1em 0;
+}
+
+.horizontal-line {
+    text-align: center;
+    display:block;
+    width:80%;
+    height:2px;
+    background-color:#FCE26B;
+    margin: 5% 0 3% 0 ;
+}

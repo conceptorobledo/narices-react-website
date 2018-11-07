@@ -1,0 +1,23 @@
+
+
+section .container
+.row {
+    height: 600px;
+}
+
+.left {
+    text-align:left;
+}
+
+.col.background-png {
+    background: url("/perro-mestizo.png") no-repeat 25% bottom;
+    background-size: 60%;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 80vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
