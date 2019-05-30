@@ -4,6 +4,8 @@ import './PodcastList.css';
 /* global RSSParser */
 //Debe ser global o devuelve error en el build
 import 'rss-parser/dist/rss-parser.min.js';
+
+const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
 const parser = new RSSParser();
 
 class componentName extends Component {
@@ -13,7 +15,7 @@ class componentName extends Component {
 
     async componentDidMount() {
         //const parser = await new Parser();
-        const feed = await parser.parseURL('http://feeds.soundcloud.com/users/soundcloud:users:410463717/sounds.rss');
+        const feed = await parser.parseURL(CORS_PROXY + 'http://feeds.soundcloud.com/users/soundcloud:users:410463717/sounds.rss');
         const response = await feed.items;
         await response.map((item) => {
             const guid = item.guid;

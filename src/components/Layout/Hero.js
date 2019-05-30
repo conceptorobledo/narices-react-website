@@ -8,7 +8,7 @@ const hero = () => {
                 <div className="row">
                     <div className="col left vertical-center">
                         <div className="justify-content-center align-items-center">
-                            <h1>Hablemos de <b>animales</b></h1>
+                            <h1>Defendamos a los <b>animales</b></h1>
                             <p>Un podcast con historias que inspiran.  </p>
                         </div>
                     </div>
